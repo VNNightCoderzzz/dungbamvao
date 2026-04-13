@@ -6,16 +6,40 @@
 
   <!-- Meta Discord -->
   <meta property="og:title" content="Đừng bấm vào :)">
-  <meta property="og:description" content="Tò mò không tốt đâu...">
+  <meta property="og:description" content="Bánh mì ram ram đang phét bơ">
   <meta property="og:type" content="website">
 </head>
 
-<body style="display:flex;justify-content:center;align-items:center;height:100vh;background:black;color:white;font-family:sans-serif;">
+<body style="margin:0;background:black;color:white;display:flex;justify-content:center;align-items:center;height:100vh;font-family:sans-serif;">
 
-  <h1 style="cursor:pointer;"
-      onclick="window.location.href='https://www.mediafire.com/file/p1krsipp07z8kr8/may+thg+jet+jet+mods+1.21.11.zip/file'">
-    Đừng bấm vào :)
-  </h1>
+  <h1 id="text">Sao Bro lại bấm vào?????</h1>
+
+  <!-- Nhạc -->
+  <audio id="rickroll">
+    <source src="https://www.myinstants.com/media/sounds/rickroll.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const audio = document.getElementById("rickroll");
+    const text = document.getElementById("text");
+
+    setTimeout(() => {
+      text.innerText = "Chúc mừng đã bị rickroll ";
+
+      audio.play().catch(() => {
+  
+        document.body.addEventListener("click", () => {
+          audio.play();
+        }, { once: true });
+      });
+
+    }, 3000);
+
+
+    setTimeout(() => {
+      window.location.href = "https://www.mediafire.com/file/p1krsipp07z8kr8/may+thg+jet+jet+mods+1.21.11.zip/file";
+    }, 5000);
+  </script>
 
 </body>
 </html>
