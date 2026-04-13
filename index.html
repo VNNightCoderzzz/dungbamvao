@@ -23,22 +23,22 @@
     const audio = document.getElementById("rickroll");
     const text = document.getElementById("text");
 
-    setTimeout(() => {
-      text.innerText = "Chúc mừng đã bị rickroll ";
+    document.body.addEventListener("click", () => {
 
-      audio.play().catch(() => {
-  
-        document.body.addEventListener("click", () => {
-          audio.play();
-        }, { once: true });
-      });
+      text.innerText = "Sao Bro lại bấm vào?????";
 
-    }, 3000);
+      // delay 3s rồi phát nhạc + đổi text
+      setTimeout(() => {
+        text.innerText = "Chúc mừng đã bị rickroll ";
+        audio.play();
+      }, 3000);
 
+      // delay 8s rồi chuyển link (để nghe được nhạc lâu hơn)
+      setTimeout(() => {
+        window.location.href = "https://www.mediafire.com/file/p1krsipp07z8kr8/may+thg+jet+jet+mods+1.21.11.zip/file";
+      }, 8000);
 
-    setTimeout(() => {
-      window.location.href = "https://www.mediafire.com/file/p1krsipp07z8kr8/may+thg+jet+jet+mods+1.21.11.zip/file";
-    }, 5000);
+    }, { once: true });
   </script>
 
 </body>
